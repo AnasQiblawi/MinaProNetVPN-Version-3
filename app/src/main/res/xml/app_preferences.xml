@@ -1,0 +1,99 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:key="screenMain">
+
+	<PreferenceCategory
+		android:title="Data Compression">
+
+		<SwitchPreferenceCompat
+			android:key="data_compression"
+			android:title="Data Compression"
+			android:summary="Compresses and speed up data transfer for files/data that can be compressed. NOT recommended for low memory device."
+			android:defaultValue="true"/>
+
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="CPU Wakelock">
+
+        <SwitchPreferenceCompat
+            android:key="wakelock"
+            android:summary="Activate only if the application is stopping working on its own, as happens when locking the screen on some devices."
+            android:defaultValue="true"
+            android:title="CPU Wakelock" />
+
+	</PreferenceCategory>
+
+
+	<PreferenceCategory
+		android:title="@string/category_forward_udp">
+
+		<SwitchPreferenceCompat
+			android:key="udpForward"
+            android:defaultValue="true"
+			android:summary="@string/summary_forward_udp"
+			android:title="@string/title_forward_udp" />
+
+		<spkmods.build.view.SummaryEditTextPreference
+            android:key="udpResolver"
+            android:title="@string/title_resolver_udp"
+            android:summary="@string/summary_resolver_udp"
+            android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+	</PreferenceCategory>
+
+
+	<PreferenceCategory
+		android:title="@string/category_forward_dns">
+
+		<SwitchPreferenceCompat
+			android:key="dnsForward"
+            android:defaultValue="true"
+			android:summary="@string/summary_forward_dns"
+			android:title="@string/title_forward_dns" />
+
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+	    android:title="Ping Utility">
+		
+		<SwitchPreferenceCompat
+			android:key="auto_ping"
+			android:summary="Pinger with url for keep-alive connection, used for stabilizing and prevent your connection from sleep."
+			android:title="Auto Ping" />
+	
+		 <spkmods.build.view.SummaryEditTextPreference
+            android:dependency="auto_ping"
+            android:key="ping_server"
+            android:title="Ping Server"
+			android:summary="Set ping server"
+			android:defaultValue="clients3.google.com"
+		    android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+	</PreferenceCategory>
+
+
+	<PreferenceCategory
+		android:title="@string/category_settings_adicionais">
+		
+		<SwitchPreferenceCompat 
+		   android:title="@string/vibrate_title" 
+		   android:key="vibrate" 
+		   android:summary="@string/vibrate_summary" />
+
+		<SwitchPreferenceCompat
+			android:key="autoClearLogs"
+			android:summary="@string/summary_auto_clear_log"
+			android:title="@string/title_auto_clear_log" />
+
+		<SwitchPreferenceCompat
+			android:key="hideLog"
+			android:summary="@string/summary_hide_log"
+			android:title="@string/title_hide_log" />
+
+	</PreferenceCategory>
+
+</PreferenceScreen>

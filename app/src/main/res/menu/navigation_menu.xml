@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/his_move">
+        <item 
+            android:icon="@drawable/ic_crown" 
+            android:id="@+id/login" 
+            android:title="VIP Login" />
+
+    </group>
+
+    <group android:id="@+id/grupo1">
+        <item
+            android:id="@+id/offlineUpdate"
+            android:icon="@drawable/ic_file_import"
+            android:title="Import Config"/>
+
+        <item
+            android:id="@+id/miPhoneConfg"
+            android:icon="@drawable/ic_wifi_tethering_black_24dp"
+            android:title="@string/network_mobile"/>
+
+        <item android:id="@+id/miSettings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings"/>
+
+    </group>
+    
+    <group android:id="@+id/grupo2">
+        <item android:id="@+id/tg"
+            android:icon="@drawable/ic_contact"
+            android:title="Contact Dev"/>
+
+        <item android:id="@+id/tg_channel"
+            android:icon="@drawable/telegram"
+            android:title="Telegram Channel"/>
+
+        <item android:id="@+id/buyAcc"
+            android:icon="@drawable/ic_vip_upgrade"
+            android:title="Buy VIP Account"/>
+
+        <item android:id="@+id/playStoreupdater"
+            android:icon="@drawable/ic_playstore"
+            android:title="Update Application"/>
+
+    </group>
+    
+    <group android:id="@+id/grupo3">
+        <item android:id="@+id/miSendFeedback"
+            android:icon="@drawable/ic_bug"
+            android:title="Report Bug"/>
+
+        <item android:id="@+id/miAbout"
+            android:icon="@drawable/info"
+            android:title="About Us"/>
+
+    </group>
+    
+</menu>

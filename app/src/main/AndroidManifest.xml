@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vpn.minapronet.com.eg">
+
+    <!-- have full network access -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- view network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- modify or delete the contents of your SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- read the contents of your SD card -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- view Wi-Fi connections -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- run foreground service -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <!-- Advertising ID Permission -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <!-- control vibration -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- prevent phone from sleeping -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- pair with Bluetooth devices -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <application
+        android:name="spkmods.build.spkmodsApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="true"
+        android:extractNativeLibs="true"
+        android:debuggable="false"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:targetApi="n">
+
+        <activity
+            android:name="spkmods.build.ultrasshservice.LaunchVpn"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:taskAffinity=".LaunchVPN"
+            android:exported="true"
+            android:label="@string/app_name">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="spkmods.build.ultrasshservice.util.DummyActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="true"
+            android:enabled="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true"
+            android:exported="true"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <receiver
+            android:exported="true"
+            android:name="spkmods.build.ultrasshservice.MainReceiver">
+
+            <intent-filter>
+
+                <action
+                    android:exported="true"
+                    android:name=".MainReceiver.ACTION_SERVICE_STOP">
+
+                </action>
+
+                <action
+                    android:exported="true"
+                    android:name=".MainReceiver.ACTION_SERVICE_RESTART">
+
+                </action>
+
+            </intent-filter>
+
+        </receiver>
+
+        <activity
+            android:name="spkmods.build.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="spkmods.build.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"
+            android:label="@string/app_name"/>
+
+        <activity
+            android:name="spkmods.build.activities.ConfigGeralActivity"
+            android:parentActivityName="spkmods.build.MainActivity"
+            android:exported="true"
+            android:label="@string/settings"/>
+
+        <service
+            android:label="MinaProNet VPN"
+            android:name="spkmods.build.ultrasshservice.tunnel.vpn.TunnelVpnService"
+            android:exported="false"
+            android:enabled="true"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+
+            <intent-filter>
+
+                <action
+                    android:exported="true"
+                    android:name="android.net.VpnService"/>
+
+            </intent-filter>
+
+        </service>
+
+        <service
+            android:label="MinaProNet Service"
+            android:name="spkmods.build.ultrasshservice.SocksHttpService"
+            android:stopWithTask="false"
+            android:exported="true">
+
+        </service>
+
+        <service
+            android:exported="true"
+            android:name="spkmods.build.model.KeepAliveService"/>
+
+        <activity
+            android:exported="true"
+            android:name="spkmods.build.compatstyle.NotImplemented"/>
+
+        <activity
+            android:exported="true"
+            android:name="spkmods.build.activities.AboutActivity"
+            android:parentActivityName="spkmods.build.MainActivity"
+            android:label="@string/about"/>
+
+        <activity
+            android:exported="true"
+            android:name="spkmods.build.errors"/>
+
+        <activity
+            android:name="spkmods.build.activities.CustomDNS"
+            android:parentActivityName="spkmods.build.MainActivity"
+            android:label="DNS Settings"/>
+
+        <activity
+            android:name="spkmods.build.activities.CoinsActivity"
+            android:label="Coins Manager"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5130321482958780~4416331509"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <service
+            android:name="com.google.android.gms.ads.AdService"
+            android:enabled="true"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="130dp"
+			android:gravity="center">
+
+			<ImageView
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:src="@drawable/ic_launcher"
+				android:layout_marginBottom="10dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="W A R N I N G"
+				android:textStyle="bold"
+				android:textColor="#FF000000"
+				android:typeface="monospace"
+				android:textSize="28sp"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="-You are not required to use this application because you are trying to remodify this app, the app will be currupted."
+			android:layout_margin="5dp"
+			android:layout_marginTop="15dp"
+			android:textColor="#FF000000"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="-Please Reinstall the Original App From MinaProNet."
+			android:layout_margin="5dp"
+			android:layout_marginTop="10dp"
+			android:textColor="#FF000000"
+			android:textStyle="bold"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

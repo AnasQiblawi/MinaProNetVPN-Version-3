@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="160dp"
+	android:id="@+id/hmRelativeLayout1"
+	android:gravity="center"
+	android:layout_marginTop="4dp"
+	android:layout_margin="5dp">
+
+	<RelativeLayout
+		android:id="@+id/easyFlipView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center">
+
+		<RelativeLayout
+			android:layout_height="160dp"
+			android:layout_width="match_parent"
+			android:paddingLeft="5dp"
+			android:id="@+id/graph_l">
+
+			<spkmods.build.Graph.DataTransferGraph2
+				android:id="@+id/imgBackCard"
+				android:layout_width="match_parent"
+				android:layout_height="160dp"
+				android:background="@null"
+				android:visibility="visible"/>
+
+			<com.github.mikephil.charting.charts.LineChart
+				android:id="@+id/chart1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginBottom="0dp"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:gravity="center"
+			android:src="@null"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/image_l">
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+</RelativeLayout>
+

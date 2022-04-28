@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<include
+		layout="@layout/toolbar_main"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:gravity="center">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:layout_margin="10dp">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Default DNS"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textStyle="bold"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Use default DNS provided by network operator"
+				android:layout_marginTop="5dp"/>
+		</LinearLayout>
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/hdnsRadioButton1"/>
+	</LinearLayout>
+	<View
+		android:background="?android:attr/dividerVertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:gravity="center">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:layout_margin="10dp">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Google DNS"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textStyle="bold"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Use DNS addresses provided by Google"
+				android:layout_marginTop="5dp"/>
+		</LinearLayout>
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/hdnsRadioButton2"/>
+	</LinearLayout>
+
+	<View
+		android:background="?android:attr/dividerVertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginBottom="10dp"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:layout_marginLeft="10dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Custom DNS"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textStyle="bold"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:layout_marginLeft="10dp"
+					android:id="@+id/hdnsLinearLayout1">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="DNS 1"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_marginRight="5dp"
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText1"
+						android:hint="8"
+						android:gravity="center"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="."
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText2"
+						android:hint="8"
+						android:gravity="center"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="."
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText3"
+						android:hint="8"
+						android:gravity="center"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="."
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText4"
+						android:hint="8"
+						android:gravity="center"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:layout_marginLeft="10dp"
+					android:layout_below="@id/hdnsLinearLayout1"
+					android:layout_marginTop="10dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="DNS 2"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:layout_marginRight="5dp"
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText5"
+						android:hint="8"
+						android:gravity="center"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="."
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText6"
+						android:hint="8"
+						android:gravity="center"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="."
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText7"
+						android:hint="4"
+						android:gravity="center"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="."
+						android:textStyle="bold"/>
+
+					<EditText
+						android:layout_width="wrap_content"
+						android:ems="2"
+						android:inputType="number"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:id="@+id/hdnsEditText8"
+						android:hint="4"
+						android:gravity="center"/>
+
+				</LinearLayout>
+
+				<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerInParent="true"
+					android:id="@+id/hdnsRadioButton3"/>
+
+			</RelativeLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

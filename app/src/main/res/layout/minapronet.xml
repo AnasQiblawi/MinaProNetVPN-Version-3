@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FF000000"
+	android:orientation="vertical">
+
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_marginBottom="?attr/actionBarSize"
+				android:orientation="vertical"
+				android:paddingTop="10dp">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:text="Status :"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="#FFF79F00"
+						android:textSize="14sp"
+						android:textStyle="bold"
+						android:typeface="serif"/>
+
+					<TextView
+						android:id="@+id/connection_status"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="4dp"
+						android:gravity="center"
+						android:text="Disconnected"
+						android:textColor="#FFFFFFFF"
+						android:textSize="15sp"
+						android:textStyle="bold"/>
+
+				</LinearLayout>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="3dp"
+					android:orientation="vertical"
+					android:padding="0.0dip">
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="45.0dip"
+						android:layout_margin="5.0dip"
+						android:layout_marginTop="10.0dip"
+						android:layout_weight="1.0"
+						android:background="@drawable/spk_spin"
+						android:orientation="horizontal">
+
+						<LinearLayout
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:orientation="horizontal">
+
+							<ImageView
+								android:layout_width="30.0dip"
+								android:layout_height="30.0dip"
+								android:layout_gravity="center"
+								android:layout_marginLeft="15.0dip"
+								android:layout_marginRight="8.0dip"
+								android:src="@drawable/server_locations"
+								android:tint="#ffffff"/>
+
+							<Spinner
+								android:id="@+id/serverSpinner"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:background="@null"
+								android:dropDownVerticalOffset="45dp"
+								android:popupBackground="@drawable/h_t_sp_ligth"
+								android:textSize="10.0sp"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="15.0dip"
+						android:layout_marginTop="1.0dip"
+						android:background="@drawable/spk7"
+						android:gravity="center"
+						android:paddingLeft="2.0dip"
+						android:paddingRight="2.0dip"
+						android:text=" LOCATION "
+						android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="#ffffff"
+						android:textSize="7.0sp"
+						android:textStyle="bold"
+						android:typeface="serif"/>
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:padding="0.0dip">
+
+					<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="45.0dip"
+						android:layout_margin="5.0dip"
+						android:layout_marginTop="10.0dip"
+						android:layout_weight="1.0"
+						android:background="@drawable/spk_spin"
+						android:orientation="horizontal">
+
+						<LinearLayout
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:orientation="horizontal">
+
+							<ImageView
+								android:layout_width="30.0dip"
+								android:layout_height="30.0dip"
+								android:layout_gravity="center"
+								android:layout_marginLeft="15.0dip"
+								android:layout_marginRight="8.0dip"
+								android:src="@drawable/network_option"
+								android:tint="#ffffff"/>
+
+							<Spinner
+								android:id="@+id/payloadSpinner"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:background="@null"
+								android:dropDownVerticalOffset="45dp"
+								android:popupBackground="@drawable/h_t_sp_ligth"/>
+
+						</LinearLayout>
+
+					</RelativeLayout>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="15.0dip"
+						android:layout_marginTop="1.0dip"
+						android:background="@drawable/spk7"
+						android:gravity="center"
+						android:paddingLeft="2.0dip"
+						android:paddingRight="2.0dip"
+						android:text=" NETWORK "
+						android:textAppearance="?android:textAppearanceSmall"
+						android:textColor="#ffffff"
+						android:textSize="7.0sp"
+						android:textStyle="bold"
+						android:typeface="serif"/>
+
+				</RelativeLayout>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:layout_marginTop="10dp"
+					android:layout_margin="5dp">
+
+					<LinearLayout
+						android:gravity="center"
+						android:orientation="horizontal"
+						android:padding="5.0dip"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:background="@drawable/spk_spin">
+
+						<ImageView
+							android:layout_width="30.0dip"
+							android:layout_height="30.0dip"
+							android:background="@drawable/timer"
+							android:layout_marginLeft="10.0dip"
+							android:layout_marginRight="6.0dip"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_margin="4.0dip"
+							android:layout_weight="1.0"
+							android:layout_gravity="center">
+
+							<TextView
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="@color/spkColor"
+								android:text="Time Left:"
+								android:textSize="13sp"
+								android:textStyle="bold"/>
+
+							<TextView
+								android:textAppearance="?android:attr/textAppearanceSmall"
+								android:textSize="13.0sp"
+								android:id="@+id/tvTimeRemain"
+								android:textColor="#fff31212"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textStyle="bold"
+								android:text="00d:00h:00m:00s"/>
+
+						</LinearLayout>
+
+						<spkmods.build.view.MaterialButton
+							android:textColor="#ffffffff"
+							android:id="@+id/btnAddTime"
+							android:layout_width="120.0dip"
+							android:layout_height="wrap_content"
+							android:textAllCaps="false"
+							android:text="Add + Time"
+							app:cornerRadius="5dp"
+							android:background="@drawable/spk_spin"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<spkmods.build.view.MaterialButton
+					android:id="@+id/activity_starterButtonMain"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:textColor="#FFFFFFFF"
+					app:cornerRadius="5dp"/>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent">
+
+					<com.google.android.gms.ads.AdView
+						xmlns:ads="http://schemas.android.com/apk/res-auto"
+						android:id="@+id/adView1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_centerHorizontal="true"
+						android:layout_alignParentBottom="true"
+						ads:adSize="BANNER"
+						ads:adUnitId="ca-app-pub-5130321482958780/5787755949"
+						android:layout_gravity="bottom"
+						android:layout_marginTop="10dp">
+
+					</com.google.android.gms.ads.AdView>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</ScrollView>
+
+</RelativeLayout>
+

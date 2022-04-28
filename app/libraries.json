@@ -1,0 +1,43 @@
+[
+  {
+    "artifactId": "recyclerview",
+    "excludes": [],
+    "groupId": "androidx.recyclerview",
+    "scope": "compile",
+    "versionName": "1.3.0-alpha01"
+  },
+  {
+    "artifactId": "cardview",
+    "excludes": [],
+    "groupId": "androidx.cardview",
+    "scope": "compile",
+    "versionName": "1.0.0"
+  },
+  {
+    "artifactId": "appcompat",
+    "excludes": [],
+    "groupId": "androidx.appcompat",
+    "scope": "compile",
+    "versionName": "1.4.1"
+  },
+  {
+    "artifactId": "preference",
+    "excludes": [],
+    "groupId": "androidx.preference",
+    "scope": "compile",
+    "versionName": "1.1.1"
+  },
+  {
+    "artifactId": "material",
+    "excludes": [],
+    "groupId": "com.google.android.material",
+    "scope": "compile",
+    "versionName": "1.5.0"
+  },
+  {
+    "artifactId": "play-services-ads",
+    "excludes": [],
+    "groupId": "com.google.android.gms",
+    "versionName": "20.6.0"
+  }
+]
